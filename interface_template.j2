@@ -1,0 +1,9 @@
+{% for interface in interfaces %}
+interface FastEthernet 0/{{ interface.number }}
+ description {{ interface.description }}
+ switchport access vlan {{ interface.vlan }}
+ switchport mode access
+ no sh
+!
+{% endfor %}
+
